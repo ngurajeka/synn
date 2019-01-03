@@ -1,0 +1,12 @@
+package: github.com/ngurajeka/synn
+import:
+- package: github.com/mitchellh/cli
+  version: ^1.0.0
+- package: github.com/spf13/viper
+  version: ^1.2.1
+- package: github.com/uber-go/zap
+  version: ^1.9.1
+- package: github.com/tealeg/xlsx
+  version: ^1.0.3
+- package: github.com/flosch/pongo2
+  version: ^3.0.0
