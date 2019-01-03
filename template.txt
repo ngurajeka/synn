@@ -1,0 +1,4 @@
+SET IDENTITY_INSERT {{ Table }} ON;
+INSERT INTO {{ Table }} ({% for column in Columns %}{{ column }}{% if not forloop.Last %}, {% endif %}{% endfor %})
+VALUES {% for row in Rows %}({% for v in row %}'{{ v }}'{% if not forloop.Last %}, {%endif%}{%endfor%}){% if forloop.Last %};{% else %},{% endif %}{% endfor %}
+SET IDENTITY_INSERT {{ Table }} OFF;
